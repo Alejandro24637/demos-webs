@@ -1,344 +1,519 @@
 <!DOCTYPE html>
+<html class="light" lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>El Tigre - Guía Comercial Moderna</title>
 
-<html class="light" lang="es"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>El Tigre - Guía Comercial Moderna</title>
-<!-- Tailwind CSS -->
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<!-- Google Fonts: Plus Jakarta Sans -->
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
-<!-- Material Symbols -->
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script id="tailwind-config">tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    colors: {
-                        "primary": "#E63946",
-                        "accent-yellow": "#fbbf24",
-                        "background-light": "#f8f5f5",
-                        "background-dark": "#221010",
-                    },
-                    fontFamily: {
-                        "display": ["Plus Jakarta Sans", "sans-serif"]
-                    },
-                    borderRadius: {
-                        "DEFAULT": "0.25rem",
-                        "lg": "0.5rem",
-                        "xl": "0.75rem",
-                        "full": "9999px"
-                    },
-                },
-            },
-        }</script>
-<style>
-        body {
-            font-family: 'Plus Jakarta Sans', sans-serif;
-        }
-        .custom-scrollbar::-webkit-scrollbar {
-            width: 4px;
-        }
-        .custom-scrollbar::-webkit-scrollbar-track {
-            background: transparent;
-        }
-        .custom-scrollbar::-webkit-scrollbar-thumb {
-            background: #e6dbdb;
-            border-radius: 10px;
-        }
-    </style>
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
+  <!-- Google Fonts: Plus Jakarta Sans -->
+  <link href="https://fonts.googleapis.com" rel="preconnect" />
+  <link crossorigin href="https://fonts.gstatic.com" rel="preconnect" />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Material Symbols (una sola vez es suficiente) -->
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+
+  <!-- Configuración de Tailwind (dark mode y colores personalizados) -->
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#E63946",
+            "accent-yellow": "#fbbf24",
+            "background-light": "#f8f5f5",
+            "background-dark": "#221010",
+          },
+          fontFamily: {
+            "display": ["Plus Jakarta Sans", "sans-serif"]
+          },
+          borderRadius: {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+        },
+      },
+    }
+  </script>
+
+  <!-- Estilos personalizados adicionales -->
+  <style>
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+    .custom-scrollbar::-webkit-scrollbar {
+      width: 4px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-track {
+      background: transparent;
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+      background: #e6dbdb;
+      border-radius: 10px;
+    }
+  </style>
 </head>
 <body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 font-display min-h-screen">
-<div class="flex min-h-screen flex-col"><header class="w-full bg-white dark:bg-zinc-900 border-b border-slate-200 dark:border-zinc-800 p-6">
-<div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
-<div class="flex items-center gap-4">
-<img alt="Logo El Tigre" class="h-16 w-auto" src="{{DATA:IMAGE:IMAGE_11}}"/>
-<div>
-<h1 class="text-3xl font-black text-slate-900 dark:text-white tracking-tight">
-                    El Tigre <span class="text-primary italic">la Ciudad</span>
-</h1>
-<p class="text-slate-500 dark:text-slate-400 text-xs font-medium uppercase tracking-widest">Guía de la Ciudad</p>
-</div>
-</div>
-<nav>
-<ul class="flex gap-8">
-<li><a class="text-sm font-bold text-primary border-b-2 border-primary pb-1" href="#">Inicio</a></li>
-<li><a class="text-sm font-bold text-slate-500 hover:text-primary transition-colors" href="#">Historia</a></li>
-<li><a class="text-sm font-bold text-slate-500 hover:text-primary transition-colors" href="#">Categorías</a></li>
-<li><a class="text-sm font-bold text-slate-500 hover:text-primary transition-colors" href="#">Guía Comercial</a></li>
-</ul>
-</nav>
-</div>
-</header>
-<!-- Sidebar (Left) -->
-<!-- Main Content Area (Right) -->
-<main class="flex-1 p-8 lg:p-12"><div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12">
-<!-- Left Sidebar (Search) -->
-<aside class="lg:col-span-3 space-y-8">
-<div class="bg-white dark:bg-zinc-900 p-6 rounded-2xl shadow-sm border border-slate-100">
-<h3 class="text-sm font-bold text-slate-900 dark:text-white mb-6 flex items-center gap-2">
-<span class="material-symbols-outlined text-primary text-lg">search</span>
-                Encontrar Negocios
+
+  <!-- Contenedor principal flex para ocupar toda la pantalla -->
+  <div class="flex min-h-screen flex-col">
+
+    <!-- ========== HEADER ========== -->
+    <header class="w-full bg-white dark:bg-zinc-900 border-b border-slate-200 dark:border-zinc-800 p-6">
+      <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
+        <!-- Logo + título -->
+        <div class="flex items-center gap-4">
+          <img alt="Logo El Tigre" class="h-16 w-auto" src="{{DATA:IMAGE:IMAGE_11}}" />
+          <div>
+            <h1 class="text-3xl font-black text-slate-900 dark:text-white tracking-tight">
+              El Tigre <span class="text-primary italic">la Ciudad</span>
+            </h1>
+            <p class="text-slate-500 dark:text-slate-400 text-xs font-medium uppercase tracking-widest">
+              Guía de la Ciudad
+            </p>
+          </div>
+        </div>
+        <!-- Navegación principal -->
+        <nav>
+          <ul class="flex gap-8">
+            <li><a class="text-sm font-bold text-primary border-b-2 border-primary pb-1" href="#">Inicio</a></li>
+            <li><a class="text-sm font-bold text-slate-500 hover:text-primary transition-colors" href="#">Historia</a></li>
+            <li><a class="text-sm font-bold text-slate-500 hover:text-primary transition-colors" href="#">Categorías</a></li>
+            <li><a class="text-sm font-bold text-slate-500 hover:text-primary transition-colors" href="#">Guía Comercial</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- ========== MAIN ========== -->
+    <main class="flex-1 p-8 lg:p-12">
+      <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12">
+
+        <!-- ========== SIDEBAR IZQUIERDA (BÚSQUEDA) ========== -->
+        <aside class="lg:col-span-3 space-y-8">
+          <div class="bg-white dark:bg-zinc-900 p-6 rounded-2xl shadow-sm border border-slate-100">
+            <h3 class="text-sm font-bold text-slate-900 dark:text-white mb-6 flex items-center gap-2">
+              <span class="material-symbols-outlined text-primary text-lg">search</span>
+              Encontrar Negocios
             </h3>
-<div class="space-y-4">
-<input class="w-full bg-slate-50 dark:bg-zinc-800 border border-slate-200 dark:border-zinc-700 rounded-xl px-4 py-3 text-sm focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all" placeholder="¿Qué estás buscando?" type="text"/>
-<div class="relative">
-<select class="w-full bg-slate-50 dark:bg-zinc-800 border border-slate-200 dark:border-zinc-700 rounded-xl px-4 py-3 text-sm focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none appearance-none text-slate-500">
-<option>Todas las categorías</option>
-<option>Gastronomía</option>
-<option>Servicios</option>
-<option>Comercio</option>
-<option>Salud</option>
-</select>
-<span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 pointer-events-none">expand_more</span>
-</div>
-<button class="w-full bg-primary hover:bg-primary/90 text-white font-bold py-3.5 rounded-xl shadow-lg shadow-primary/20 transition-all">Buscar</button>
-</div>
-</div>
-</aside>
-<!-- Right Content (Grid) -->
-<div class="lg:col-span-9">
-<div class="flex items-center justify-between mb-8">
-<h3 class="text-xl font-bold text-slate-900 dark:text-white flex items-center gap-2">
-<span class="w-2 h-8 bg-accent-yellow rounded-full"></span>
-                Negocios Destacados
+            <div class="space-y-4">
+              <input
+                class="w-full bg-slate-50 dark:bg-zinc-800 border border-slate-200 dark:border-zinc-700 rounded-xl px-4 py-3 text-sm focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all"
+                placeholder="¿Qué estás buscando?"
+                type="text"
+              />
+              <div class="relative">
+                <select
+                  class="w-full bg-slate-50 dark:bg-zinc-800 border border-slate-200 dark:border-zinc-700 rounded-xl px-4 py-3 text-sm focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none appearance-none text-slate-500"
+                >
+                  <option>Todas las categorías</option>
+                  <option>Gastronomía</option>
+                  <option>Servicios</option>
+                  <option>Comercio</option>
+                  <option>Salud</option>
+                </select>
+                <span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 pointer-events-none">
+                  expand_more
+                </span>
+              </div>
+              <button class="w-full bg-primary hover:bg-primary/90 text-white font-bold py-3.5 rounded-xl shadow-lg shadow-primary/20 transition-all">
+                Buscar
+              </button>
+            </div>
+          </div>
+        </aside>
+
+        <!-- ========== CONTENIDO PRINCIPAL (GRID DE NEGOCIOS) ========== -->
+        <div class="lg:col-span-9">
+
+          <!-- Encabezado de la sección -->
+          <div class="flex items-center justify-between mb-8">
+            <h3 class="text-xl font-bold text-slate-900 dark:text-white flex items-center gap-2">
+              <span class="w-2 h-8 bg-accent-yellow rounded-full"></span>
+              Negocios Destacados
             </h3>
-<a class="text-sm font-bold text-primary hover:underline flex items-center gap-1" href="#">
-                Ver todos <span class="material-symbols-outlined text-sm">arrow_forward</span>
-</a>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-2 gap-8"><div class="group bg-white dark:bg-zinc-900 rounded-2xl overflow-hidden border border-slate-100 dark:border-zinc-800 shadow-sm hover:shadow-xl transition-all h-full flex flex-col cursor-pointer" onclick="openModal('La Piazzetta', 'Sabores auténticos de Italia en el corazón de El Tigre. Disfrute de nuestras pastas artesanales preparadas al momento, pizzas crujientes al horno de leña y una selección exclusiva de vinos nacionales e internacionales. Un ambiente familiar y elegante para sus momentos especiales.', 'Av. Francisco de Miranda, Edif. Roma', '(0212) 626.34.11', 'Lun. a Sáb. 12:00 pm - 10:00 pm', 'https://images.unsplash.com/photo-1555396273-367ea4eb4db5?q=80&amp;w=1000&amp;auto=format&amp;fit=crop')">
-<div class="relative h-48">
-<img alt="La Piazzetta" class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?q=80&amp;w=1000&amp;auto=format&amp;fit=crop"/>
-<div class="absolute top-3 right-3 bg-accent-yellow text-zinc-900 text-[10px] font-bold px-2 py-1 rounded-md uppercase">DESTACADO</div>
-<div class="absolute bottom-3 left-3 bg-slate-900/60 backdrop-blur-sm text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase">GASTRONOMÍA</div>
-</div>
-<div class="p-6 flex-1 flex flex-col">
-<div class="flex justify-between items-start mb-2">
-<h4 class="font-extrabold text-lg text-slate-900 dark:text-white">La Piazzetta</h4>
-<div class="flex items-center gap-1 text-accent-yellow">
-<span class="material-symbols-outlined text-[16px] fill-1">star</span>
-<span class="text-xs font-bold text-slate-900 dark:text-white">4.8</span>
-</div>
-</div>
-<p class="text-slate-500 dark:text-slate-400 text-sm mb-6 line-clamp-3">Sabores auténticos de Italia en el corazón de El Tigre. Pastas artesanales y pizzas al horno de leña.</p>
-<div class="mt-auto flex items-center justify-between">
-<div class="flex items-center gap-1 text-slate-400">
-<span class="material-symbols-outlined text-[16px]">location_on</span>
-<span class="text-[10px] font-medium">Av. Francisco de Miranda</span>
-</div>
-<a class="text-primary font-bold text-xs hover:underline" href="#">Detalles →</a>
-</div>
-</div>
-</div>
-<div class="group bg-white dark:bg-zinc-900 rounded-2xl overflow-hidden border border-slate-100 dark:border-zinc-800 shadow-sm hover:shadow-xl transition-all h-full flex flex-col cursor-pointer" onclick="openModal('Ferretería El Tigre', 'Líderes en el mercado ferretero de la zona. Ofrecemos todo lo que necesitas para tu hogar, remodelación y grandes construcciones. Contamos con las mejores marcas, asesoría técnica especializada y servicio de despacho a domicilio en toda la ciudad. Calidad garantizada.', 'Calle 15 Sur, Galpón 42', '(0212) 555.12.34', 'Lun. a Vie. 08:00 am - 05:00 pm', 'https://images.unsplash.com/photo-1581244276891-8bb099774220?q=80&amp;w=1000&amp;auto=format&amp;fit=crop')">
-<div class="relative h-48">
-<div class="w-full h-full bg-slate-200 dark:bg-zinc-800 flex items-center justify-center text-slate-400 font-bold">300×300</div>
-<div class="absolute bottom-3 left-3 bg-slate-900/60 backdrop-blur-sm text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase">COMERCIO</div>
-</div>
-<div class="p-6 flex-1 flex flex-col">
-<div class="flex justify-between items-start mb-2">
-<h4 class="font-extrabold text-lg text-slate-900 dark:text-white">Ferretería El Tigre</h4>
-<div class="flex items-center gap-1 text-accent-yellow">
-<span class="material-symbols-outlined text-[16px] fill-1">star</span>
-<span class="text-xs font-bold text-slate-900 dark:text-white">4.5</span>
-</div>
-</div>
-<p class="text-slate-500 dark:text-slate-400 text-sm mb-6 line-clamp-3">Todo lo que necesitas para tu hogar y construcción. Calidad garantizada y los mejores precios del sector.</p>
-<div class="mt-auto flex items-center justify-between">
-<div class="flex items-center gap-1 text-slate-400">
-<span class="material-symbols-outlined text-[16px]">location_on</span>
-<span class="text-[10px] font-medium">Calle 15 Sur</span>
-</div>
-<a class="text-primary font-bold text-xs hover:underline" href="#">Detalles →</a>
-</div>
-</div>
-</div>
-<div class="group bg-white dark:bg-zinc-900 rounded-2xl overflow-hidden border border-slate-100 dark:border-zinc-800 shadow-sm hover:shadow-xl transition-all h-full flex flex-col cursor-pointer" onclick="openModal('Clínica Los Olivos', 'Centro de salud integral con más de 20 años de trayectoria. Brindamos atención médica de primera clase con especialistas en todas las áreas: pediatría, cardiología, ginecología y más. Contamos con laboratorio propio y emergencia las 24 horas del día.', 'Av. Intercomunal, Sector Los Olivos', '(0212) 999.88.77', 'Emergencias 24/7 - Consultas 08:00 am - 06:00 pm', 'https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?q=80&amp;w=1000&amp;auto=format&amp;fit=crop')">
-<div class="relative h-48 bg-[#009669] flex flex-col items-center justify-center p-6">
-<span class="material-symbols-outlined text-5xl text-white mb-2">medical_services</span>
-<h5 class="text-white font-black text-center text-sm">CLÍNICA LOS OLIVOS</h5>
-<p class="text-white/80 text-[10px] italic">NATURA</p>
-<div class="absolute bottom-3 left-3 bg-slate-900/60 backdrop-blur-sm text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase">SALUD</div>
-</div>
-<div class="p-6 flex-1 flex flex-col">
-<div class="flex justify-between items-start mb-2">
-<h4 class="font-extrabold text-lg text-slate-900 dark:text-white">Clínica Los Olivos</h4>
-<div class="flex items-center gap-1 text-accent-yellow">
-<span class="material-symbols-outlined text-[16px] fill-1">star</span>
-<span class="text-xs font-bold text-slate-900 dark:text-white">4.9</span>
-</div>
-</div>
-<p class="text-slate-500 dark:text-slate-400 text-sm mb-6 line-clamp-3">Atención médica de primera clase con especialistas en todas las áreas. Cuidando tu salud las 24 horas.</p>
-<div class="mt-auto flex items-center justify-between">
-<div class="flex items-center gap-1 text-slate-400">
-<span class="material-symbols-outlined text-[16px]">location_on</span>
-<span class="text-[10px] font-medium">Av. Intercomunal</span>
-</div>
-<a class="text-primary font-bold text-xs hover:underline" href="#">Detalles →</a>
-</div>
-</div>
-</div>
-<div class="group bg-white dark:bg-zinc-900 rounded-2xl overflow-hidden border border-slate-100 dark:border-zinc-800 shadow-sm hover:shadow-xl transition-all h-full flex flex-col cursor-pointer" onclick="openModal('Taller ElectroFlash', 'Especialistas en la reparación de electrodomésticos de todas las marcas. Lavadoras, neveras, microondas y equipos electrónicos complejos. Contamos con repuestos originales y técnicos certificados. Ofrecemos garantía por todos nuestros trabajos realizados.', 'Sector Pueblo Nuevo, Av. 5', '(0212) 444.33.22', 'Lun. a Vie. 09:00 am - 06:00 pm', 'https://images.unsplash.com/photo-1581092160562-40aa08e78837?q=80&amp;w=1000&amp;auto=format&amp;fit=crop')">
-<div class="relative h-48">
-<div class="w-full h-full bg-slate-200 dark:bg-zinc-800 flex items-center justify-center text-slate-400 font-bold">300×300</div>
-<div class="absolute bottom-3 left-3 bg-slate-900/60 backdrop-blur-sm text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase">SERVICIOS</div>
-</div>
-<div class="p-6 flex-1 flex flex-col">
-<div class="flex justify-between items-start mb-2">
-<h4 class="font-extrabold text-lg text-slate-900 dark:text-white">Taller ElectroFlash</h4>
-<div class="flex items-center gap-1 text-accent-yellow">
-<span class="material-symbols-outlined text-[16px] fill-1">star</span>
-<span class="text-xs font-bold text-slate-900 dark:text-white">4.2</span>
-</div>
-</div>
-<p class="text-slate-500 dark:text-slate-400 text-sm mb-6 line-clamp-3">Reparación de electrodomésticos y equipos electrónicos. Servicio a domicilio rápido y confiable.</p>
-<div class="mt-auto flex items-center justify-between">
-<div class="flex items-center gap-1 text-slate-400">
-<span class="material-symbols-outlined text-[16px]">location_on</span>
-<span class="text-[10px] font-medium">Sector Pueblo Nuevo</span>
-</div>
-<a class="text-primary font-bold text-xs hover:underline" href="#">Detalles →</a>
-</div>
-</div>
-</div>
-<div class="group bg-white dark:bg-zinc-900 rounded-2xl overflow-hidden border border-slate-100 dark:border-zinc-800 shadow-sm hover:shadow-xl transition-all h-full flex flex-col cursor-pointer" onclick="openModal('Boutique Glam', 'El destino definitivo para los amantes de la moda en El Tigre. Encuentra lo último en tendencias nacionales e internacionales. Vestidos de gala, ropa casual chic y accesorios exclusivos que resaltarán tu personalidad en cada ocasión especial.', 'C.C. San Remo Mall, Local L-15', '(0212) 777.66.55', 'Lun. a Dom. 10:00 am - 08:00 pm', 'https://images.unsplash.com/photo-1441986300917-64674bd600d8?q=80&amp;w=1000&amp;auto=format&amp;fit=crop')">
-<div class="relative h-48">
-<div class="w-full h-full bg-slate-200 dark:bg-zinc-800 flex items-center justify-center text-slate-400 font-bold">300×300</div>
-<div class="absolute bottom-3 left-3 bg-slate-900/60 backdrop-blur-sm text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase">COMERCIO</div>
-</div>
-<div class="p-6 flex-1 flex flex-col">
-<div class="flex justify-between items-start mb-2">
-<h4 class="font-extrabold text-lg text-slate-900 dark:text-white">Boutique Glam</h4>
-<div class="flex items-center gap-1 text-accent-yellow">
-<span class="material-symbols-outlined text-[16px] fill-1">star</span>
-<span class="text-xs font-bold text-slate-900 dark:text-white">4.7</span>
-</div>
-</div>
-<p class="text-slate-500 dark:text-slate-400 text-sm mb-6 line-clamp-3">Lo último en tendencias nacionales e internacionales. Ropa y accesorios para cada ocasión especial.</p>
-<div class="mt-auto flex items-center justify-between">
-<div class="flex items-center gap-1 text-slate-400">
-<span class="material-symbols-outlined text-[16px]">location_on</span>
-<span class="text-[10px] font-medium">C.C. San Remo Mall</span>
-</div>
-<a class="text-primary font-bold text-xs hover:underline" href="#">Detalles →</a>
-</div>
-</div>
-</div>
-<div class="group bg-white dark:bg-zinc-900 rounded-2xl overflow-hidden border border-slate-100 dark:border-zinc-800 shadow-sm hover:shadow-xl transition-all h-full flex flex-col cursor-pointer" onclick="openModal('Tigre Café', 'Mucho más que una cafetería, un espacio de encuentro. Disfruta del mejor café de origen, postres artesanales y desayunos gourmet en un ambiente acogedor y moderno. Ideal para reuniones de trabajo, lectura o simplemente un momento de relax.', 'Casco Viejo, Calle Bolívar', '(0212) 222.11.00', 'Lun. a Sáb. 07:00 am - 09:00 pm', 'https://images.unsplash.com/photo-1501339819358-6830b564383f?q=80&amp;w=1000&amp;auto=format&amp;fit=crop')">
-<div class="relative h-48">
-<div class="w-full h-full bg-slate-200 dark:bg-zinc-800 flex items-center justify-center text-slate-400 font-bold">300×300</div>
-<div class="absolute bottom-3 left-3 bg-slate-900/60 backdrop-blur-sm text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase">GASTRONOMÍA</div>
-</div>
-<div class="p-6 flex-1 flex flex-col">
-<div class="flex justify-between items-start mb-2">
-<h4 class="font-extrabold text-lg text-slate-900 dark:text-white">Tigre Café</h4>
-<div class="flex items-center gap-1 text-accent-yellow">
-<span class="material-symbols-outlined text-[16px] fill-1">star</span>
-<span class="text-xs font-bold text-slate-900 dark:text-white">4.6</span>
-</div>
-</div>
-<p class="text-slate-500 dark:text-slate-400 text-sm mb-6 line-clamp-3">El mejor café de origen en un ambiente acogedor. El lugar perfecto para reuniones y buena lectura.</p>
-<div class="mt-auto flex items-center justify-between">
-<div class="flex items-center gap-1 text-slate-400">
-<span class="material-symbols-outlined text-[16px]">location_on</span>
-<span class="text-[10px] font-medium">Casco Viejo</span>
-</div>
-<a class="text-primary font-bold text-xs hover:underline" href="#">Detalles →</a>
-</div>
-</div>
-</div></div>
-</div>
-</div></main><section class="w-full px-8 lg:px-12 pb-12">
-<div class="max-w-7xl mx-auto bg-primary/5 dark:bg-zinc-900/50 rounded-[2rem] p-12 relative overflow-hidden flex flex-col md:flex-row items-center justify-between gap-8 border border-primary/10">
-<div class="relative z-10 max-w-xl">
-<h2 class="text-4xl md:text-5xl font-black text-slate-900 dark:text-white mb-6">
-        ¿Tienes <br/><span class="text-primary">un negocio?</span>
-</h2>
-<p class="text-slate-600 dark:text-slate-400 text-lg leading-relaxed mb-8 font-medium">
-        Forma parte de la guía más completa de El Tigre y llega a miles de clientes potenciales.
-      </p>
-<button class="bg-primary hover:bg-primary/90 text-white font-bold py-4 px-10 rounded-2xl shadow-xl shadow-primary/30 transition-all text-lg">
-        Registrar mi negocio
+            <a class="text-sm font-bold text-primary hover:underline flex items-center gap-1" href="#">
+              Ver todos
+              <span class="material-symbols-outlined text-sm">arrow_forward</span>
+            </a>
+          </div>
+
+          <!-- Grid de tarjetas (6 negocios) -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+            <!-- Tarjeta 1: La Piazzetta -->
+            <div
+              class="group bg-white dark:bg-zinc-900 rounded-2xl overflow-hidden border border-slate-100 dark:border-zinc-800 shadow-sm hover:shadow-xl transition-all h-full flex flex-col cursor-pointer"
+              onclick="openModal(
+                'La Piazzetta',
+                'Sabores auténticos de Italia en el corazón de El Tigre. Disfrute de nuestras pastas artesanales preparadas al momento, pizzas crujientes al horno de leña y una selección exclusiva de vinos nacionales e internacionales. Un ambiente familiar y elegante para sus momentos especiales.',
+                'Av. Francisco de Miranda, Edif. Roma',
+                '(0212) 626.34.11',
+                'Lun. a Sáb. 12:00 pm - 10:00 pm',
+                'https://images.unsplash.com/photo-1555396273-367ea4eb4db5?q=80&w=1000&auto=format&fit=crop'
+              )"
+            >
+              <div class="relative h-48">
+                <img
+                  alt="La Piazzetta"
+                  class="w-full h-full object-cover"
+                  src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?q=80&w=1000&auto=format&fit=crop"
+                />
+                <div class="absolute top-3 right-3 bg-accent-yellow text-zinc-900 text-[10px] font-bold px-2 py-1 rounded-md uppercase">
+                  DESTACADO
+                </div>
+                <div class="absolute bottom-3 left-3 bg-slate-900/60 backdrop-blur-sm text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase">
+                  GASTRONOMÍA
+                </div>
+              </div>
+              <div class="p-6 flex-1 flex flex-col">
+                <div class="flex justify-between items-start mb-2">
+                  <h4 class="font-extrabold text-lg text-slate-900 dark:text-white">La Piazzetta</h4>
+                  <div class="flex items-center gap-1 text-accent-yellow">
+                    <span class="material-symbols-outlined text-[16px] fill-1">star</span>
+                    <span class="text-xs font-bold text-slate-900 dark:text-white">4.8</span>
+                  </div>
+                </div>
+                <p class="text-slate-500 dark:text-slate-400 text-sm mb-6 line-clamp-3">
+                  Sabores auténticos de Italia en el corazón de El Tigre. Pastas artesanales y pizzas al horno de leña.
+                </p>
+                <div class="mt-auto flex items-center justify-between">
+                  <div class="flex items-center gap-1 text-slate-400">
+                    <span class="material-symbols-outlined text-[16px]">location_on</span>
+                    <span class="text-[10px] font-medium">Av. Francisco de Miranda</span>
+                  </div>
+                  <a class="text-primary font-bold text-xs hover:underline" href="#">Detalles →</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Tarjeta 2: Farmatodo (anteriormente Ferretería El Tigre) -->
+            <div
+            class="group bg-white dark:bg-zinc-900 rounded-2xl overflow-hidden border border-slate-100 dark:border-zinc-800 shadow-sm hover:shadow-xl transition-all h-full flex flex-col cursor-pointer"
+            onclick="openModal(
+                'Farmatodo (Sucursal El Tigre)',
+                'Mucho más que una farmacia, es el punto de referencia para compras de conveniencia en la ciudad. Con su característico concepto de todo en un solo lugar, ofrece desde medicamentos y artículos de cuidado personal hasta una completa sección de belleza, snacks y productos para el hogar. Su diseño moderno y amplios pasillos permiten una experiencia de compra rápida y cómoda, siendo famoso por sus servicios adicionales como la toma de tensión y aplicaciones de inyecciones.',
+                'Av. Winston Churchill, Sector Pueblo Nuevo Sur (frente al CC Unimall), El Tigre.',
+                '0-800-327-62-86',
+                'Lun. a Vie. 08:00 am - 05:00 pm',
+                'https://images.unsplash.com/photo-1581244276891-8bb099774220?q=80&w=1000&auto=format&fit=crop'
+            )"
+            >
+            <div class="relative h-48">
+                <div class="w-full h-full bg-slate-200 dark:bg-zinc-800 flex items-center justify-center text-slate-400 font-bold">
+                300×300
+                </div>
+                <div class="absolute bottom-3 left-3 bg-slate-900/60 backdrop-blur-sm text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase">
+                COMERCIO
+                </div>
+            </div>
+            <div class="p-6 flex-1 flex flex-col">
+                <div class="flex justify-between items-start mb-2">
+                <h4 class="font-extrabold text-lg text-slate-900 dark:text-white">Farmatodo</h4>
+                <div class="flex items-center gap-1 text-accent-yellow">
+                    <span class="material-symbols-outlined text-[16px] fill-1">star</span>
+                    <span class="text-xs font-bold text-slate-900 dark:text-white">4.5</span>
+                </div>
+                </div>
+                <p class="text-slate-500 dark:text-slate-400 text-sm mb-6 line-clamp-3">
+                Mucho más que una farmacia, con 'todo en un solo lugar' para tu conveniencia.
+                </p>
+                <div class="mt-auto flex items-center justify-between">
+                <div class="flex items-center gap-1 text-slate-400">
+                    <span class="material-symbols-outlined text-[16px]">location_on</span>
+                    <span class="text-[10px] font-medium">Av. Winston Churchill</span>
+                </div>
+                <a class="text-primary font-bold text-xs hover:underline" href="#">Detalles →</a>
+                </div>
+            </div>
+            </div>
+
+            <!-- Tarjeta 3: Clínica Santa Rosa (anteriormente Clínica Los Olivos) -->
+            <div
+            class="group bg-white dark:bg-zinc-900 rounded-2xl overflow-hidden border border-slate-100 dark:border-zinc-800 shadow-sm hover:shadow-xl transition-all h-full flex flex-col cursor-pointer"
+            onclick="openModal(
+                'Clínica Santa Rosa',
+                'Una de las instituciones médicas privadas con mayor trayectoria en la zona sur del estado Anzoátegui. Ofrece una atención integral que abarca emergencias las 24 horas, hospitalización, quirófanos equipados y una amplia red de consultas externas en especialidades como pediatría, ginecología y medicina interna. Se distingue por su compromiso con la comunidad de El Tigre, brindando diagnósticos precisos mediante tecnología médica avanzada en un entorno profesional y seguro.',
+                'Av. Francisco de Miranda, Local 223 (Frente al Colegio La Coromoto), Pueblo Nuevo Norte.',
+                '(0283) 500.51.00',
+                'Emergencias 24/7 - Consultas 08:00 am - 06:00 pm',
+                'https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?q=80&w=1000&auto=format&fit=crop'
+            )"
+            >
+            <div class="relative h-48 bg-[#009669] flex flex-col items-center justify-center p-6">
+                <span class="material-symbols-outlined text-5xl text-white mb-2">medical_services</span>
+                <h5 class="text-white font-black text-center text-sm">CLÍNICA SANTA ROSA</h5>
+                <p class="text-white/80 text-[10px] italic">SALUD</p>
+                <div class="absolute bottom-3 left-3 bg-slate-900/60 backdrop-blur-sm text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase">
+                SALUD
+                </div>
+            </div>
+            <div class="p-6 flex-1 flex flex-col">
+                <div class="flex justify-between items-start mb-2">
+                <h4 class="font-extrabold text-lg text-slate-900 dark:text-white">Clínica Santa Rosa</h4>
+                <div class="flex items-center gap-1 text-accent-yellow">
+                    <span class="material-symbols-outlined text-[16px] fill-1">star</span>
+                    <span class="text-xs font-bold text-slate-900 dark:text-white">4.9</span>
+                </div>
+                </div>
+                <p class="text-slate-500 dark:text-slate-400 text-sm mb-6 line-clamp-3">
+                Institución médica privada con emergencias 24h, hospitalización y amplia red de especialistas.
+                </p>
+                <div class="mt-auto flex items-center justify-between">
+                <div class="flex items-center gap-1 text-slate-400">
+                    <span class="material-symbols-outlined text-[16px]">location_on</span>
+                    <span class="text-[10px] font-medium">Av. Francisco de Miranda</span>
+                </div>
+                <a class="text-primary font-bold text-xs hover:underline" href="#">Detalles →</a>
+                </div>
+            </div>
+            </div>
+
+            <!-- Tarjeta 4: Vnet (anteriormente Taller ElectroFlash) -->
+            <div
+            class="group bg-white dark:bg-zinc-900 rounded-2xl overflow-hidden border border-slate-100 dark:border-zinc-800 shadow-sm hover:shadow-xl transition-all h-full flex flex-col cursor-pointer"
+            onclick="openModal(
+                'Vnet (Fibra Óptica)',
+                'Empresa líder en servicios de telecomunicaciones que ha transformado la conectividad en El Tigre. Especializada en internet por fibra óptica de alta velocidad y televisión digital, ofrece soluciones tanto para hogares como para el sector empresarial e industrial de la zona. Su tienda física permite a los usuarios gestionar contratos, solicitar soporte técnico directo y conocer los nuevos planes de navegación en un ambiente tecnológico y eficiente.',
+                'Av. Francisco de Miranda con Calle Colón, sector La Plaza, C.C. Doña Odett, local 4.',
+                '0-800-VNET-000 (0800-8638-000)',
+                'Lun. a Vie. 09:00 am - 06:00 pm',
+                'https://images.unsplash.com/photo-1581092160562-40aa08e78837?q=80&w=1000&auto=format&fit=crop'
+            )"
+            >
+            <div class="relative h-48">
+                <div class="w-full h-full bg-slate-200 dark:bg-zinc-800 flex items-center justify-center text-slate-400 font-bold">
+                300×300
+                </div>
+                <div class="absolute bottom-3 left-3 bg-slate-900/60 backdrop-blur-sm text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase">
+                SERVICIOS
+                </div>
+            </div>
+            <div class="p-6 flex-1 flex flex-col">
+                <div class="flex justify-between items-start mb-2">
+                <h4 class="font-extrabold text-lg text-slate-900 dark:text-white">Vnet</h4>
+                <div class="flex items-center gap-1 text-accent-yellow">
+                    <span class="material-symbols-outlined text-[16px] fill-1">star</span>
+                    <span class="text-xs font-bold text-slate-900 dark:text-white">4.2</span>
+                </div>
+                </div>
+                <p class="text-slate-500 dark:text-slate-400 text-sm mb-6 line-clamp-3">
+                Internet por fibra óptica de alta velocidad y TV digital para hogares y empresas.
+                </p>
+                <div class="mt-auto flex items-center justify-between">
+                <div class="flex items-center gap-1 text-slate-400">
+                    <span class="material-symbols-outlined text-[16px]">location_on</span>
+                    <span class="text-[10px] font-medium">Av. Francisco de Miranda</span>
+                </div>
+                <a class="text-primary font-bold text-xs hover:underline" href="#">Detalles →</a>
+                </div>
+            </div>
+            </div>
+
+            <!-- Tarjeta 5: Grupo Dubai AAA (anteriormente Boutique Glam) -->
+            <div
+            class="group bg-white dark:bg-zinc-900 rounded-2xl overflow-hidden border border-slate-100 dark:border-zinc-800 shadow-sm hover:shadow-xl transition-all h-full flex flex-col cursor-pointer"
+            onclick="openModal(
+                'Grupo Dubai AAA',
+                'Una tienda física destacada en el sector comercial de Pueblo Nuevo, conocida por ofrecer una amplia gama de artículos que van desde tecnología y electrodomésticos hasta variedades para el hogar. Es un negocio que ha ganado popularidad por traer tendencias actuales a la ciudad con una atención personalizada. Su local es amplio y permite a los clientes ver de cerca el funcionamiento de los equipos antes de adquirirlos, consolidándose como una opción confiable para el comercio local.',
+                'Av. Francisco de Miranda, Local Nro. 178, Sector Pueblo Nuevo Sur, El Tigre.',
+                '+58 424-8342411',
+                'Lun. a Dom. 10:00 am - 08:00 pm',
+                'https://images.unsplash.com/photo-1441986300917-64674bd600d8?q=80&w=1000&auto=format&fit=crop'
+            )"
+            >
+            <div class="relative h-48">
+                <div class="w-full h-full bg-slate-200 dark:bg-zinc-800 flex items-center justify-center text-slate-400 font-bold">
+                300×300
+                </div>
+                <div class="absolute bottom-3 left-3 bg-slate-900/60 backdrop-blur-sm text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase">
+                COMERCIO
+                </div>
+            </div>
+            <div class="p-6 flex-1 flex flex-col">
+                <div class="flex justify-between items-start mb-2">
+                <h4 class="font-extrabold text-lg text-slate-900 dark:text-white">Grupo Dubai AAA</h4>
+                <div class="flex items-center gap-1 text-accent-yellow">
+                    <span class="material-symbols-outlined text-[16px] fill-1">star</span>
+                    <span class="text-xs font-bold text-slate-900 dark:text-white">4.7</span>
+                </div>
+                </div>
+                <p class="text-slate-500 dark:text-slate-400 text-sm mb-6 line-clamp-3">
+                Amplia gama de tecnología, electrodomésticos y variedades para el hogar con atención personalizada.
+                </p>
+                <div class="mt-auto flex items-center justify-between">
+                <div class="flex items-center gap-1 text-slate-400">
+                    <span class="material-symbols-outlined text-[16px]">location_on</span>
+                    <span class="text-[10px] font-medium">Av. Francisco de Miranda</span>
+                </div>
+                <a class="text-primary font-bold text-xs hover:underline" href="#">Detalles →</a>
+                </div>
+            </div>
+            </div>
+
+            <!-- Tarjeta 6: Bistro El Tigre (anteriormente Tigre Café) -->
+            <div
+            class="group bg-white dark:bg-zinc-900 rounded-2xl overflow-hidden border border-slate-100 dark:border-zinc-800 shadow-sm hover:shadow-xl transition-all h-full flex flex-col cursor-pointer"
+            onclick="openModal(
+                'Bistro El Tigre',
+                'Un rincón íntimo y artístico que rinde homenaje a la identidad local de El Tigre. Con una iluminación tenue y ambiente acogedor, este bistro es perfecto para celebraciones privadas y aniversarios. Su propuesta se basa en la cocina mediterránea y de fusión, siendo sus platos estrella las pastas con mariscos y postres artesanales como el volcán de chocolate.',
+                'Calle 17 Sur, El Tigre 6050, Anzoátegui.',
+                '+58 424-8055477',
+                'Lun. a Sáb. 07:00 am - 09:00 pm',
+                'https://images.unsplash.com/photo-1501339819358-6830b564383f?q=80&w=1000&auto=format&fit=crop'
+            )"
+            >
+            <div class="relative h-48">
+                <div class="w-full h-full bg-slate-200 dark:bg-zinc-800 flex items-center justify-center text-slate-400 font-bold">
+                300×300
+                </div>
+                <div class="absolute bottom-3 left-3 bg-slate-900/60 backdrop-blur-sm text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase">
+                GASTRONOMÍA
+                </div>
+            </div>
+            <div class="p-6 flex-1 flex flex-col">
+                <div class="flex justify-between items-start mb-2">
+                <h4 class="font-extrabold text-lg text-slate-900 dark:text-white">Bistro El Tigre</h4>
+                <div class="flex items-center gap-1 text-accent-yellow">
+                    <span class="material-symbols-outlined text-[16px] fill-1">star</span>
+                    <span class="text-xs font-bold text-slate-900 dark:text-white">4.6</span>
+                </div>
+                </div>
+                <p class="text-slate-500 dark:text-slate-400 text-sm mb-6 line-clamp-3">
+                Rincón íntimo con cocina mediterránea y de fusión, ideal para celebraciones.
+                </p>
+                <div class="mt-auto flex items-center justify-between">
+                <div class="flex items-center gap-1 text-slate-400">
+                    <span class="material-symbols-outlined text-[16px]">location_on</span>
+                    <span class="text-[10px] font-medium">Calle 17 Sur</span>
+                </div>
+                <a class="text-primary font-bold text-xs hover:underline" href="#">Detalles →</a>
+                </div>
+            </div>
+            </div>
+          </div> <!-- Fin grid -->
+        </div> <!-- Fin col-9 -->
+      </div> <!-- Fin grid principal -->
+    </main>
+
+    <!-- ========== SECCIÓN DE LLAMADO A LA ACCIÓN (REGISTRO DE NEGOCIOS) ========== -->
+    <section class="w-full px-8 lg:px-12 pb-12">
+      <div class="max-w-7xl mx-auto bg-primary/5 dark:bg-zinc-900/50 rounded-[2rem] p-12 relative overflow-hidden flex flex-col md:flex-row items-center justify-between gap-8 border border-primary/10">
+        <div class="relative z-10 max-w-xl">
+          <h2 class="text-4xl md:text-5xl font-black text-slate-900 dark:text-white mb-6">
+            ¿Tienes <br /><span class="text-primary">un negocio?</span>
+          </h2>
+          <p class="text-slate-600 dark:text-slate-400 text-lg leading-relaxed mb-8 font-medium">
+            Forma parte de la guía más completa de El Tigre y llega a miles de clientes potenciales.
+          </p>
+          <button class="bg-primary hover:bg-primary/90 text-white font-bold py-4 px-10 rounded-2xl shadow-xl shadow-primary/30 transition-all text-lg">
+            Registrar mi negocio
+          </button>
+        </div>
+        <!-- Elementos decorativos de fondo (blur) -->
+        <div class="hidden md:block absolute -right-12 -bottom-12 w-64 h-64 bg-primary/10 rounded-full blur-3xl"></div>
+        <div class="hidden md:block absolute -left-12 -top-12 w-48 h-48 bg-accent-yellow/10 rounded-full blur-3xl"></div>
+      </div>
+    </section>
+  </div> <!-- Fin contenedor principal flex -->
+
+  <!-- ========== MODAL DE DETALLES DEL NEGOCIO ========== -->
+  <div
+    class="fixed inset-0 z-[100] hidden items-center justify-center p-4 bg-black/50 backdrop-blur-sm"
+    id="businessModal"
+    onclick="if(event.target === this) closeModal()"
+  >
+    <div class="bg-white dark:bg-zinc-900 w-full max-w-2xl rounded-2xl overflow-hidden shadow-2xl relative animate-in fade-in zoom-in duration-200">
+      <button
+        class="absolute top-4 right-4 z-10 bg-white/80 dark:bg-zinc-800/80 p-1.5 rounded-full hover:bg-white transition-colors"
+        onclick="closeModal()"
+      >
+        <span class="material-symbols-outlined text-slate-700 dark:text-slate-200">close</span>
       </button>
-</div>
-<div class="hidden md:block absolute -right-12 -bottom-12 w-64 h-64 bg-primary/10 rounded-full blur-3xl"></div>
-<div class="hidden md:block absolute -left-12 -top-12 w-48 h-48 bg-accent-yellow/10 rounded-full blur-3xl"></div>
-</div>
-</section>
-</div>
-<div class="fixed inset-0 z-[100] hidden items-center justify-center p-4 bg-black/50 backdrop-blur-sm" id="businessModal" onclick="if(event.target === this) closeModal()">
-<div class="bg-white dark:bg-zinc-900 w-full max-w-2xl rounded-2xl overflow-hidden shadow-2xl relative animate-in fade-in zoom-in duration-200">
-<button class="absolute top-4 right-4 z-10 bg-white/80 dark:bg-zinc-800/80 p-1.5 rounded-full hover:bg-white transition-colors" onclick="closeModal()">
-<span class="material-symbols-outlined text-slate-700 dark:text-slate-200">close</span>
-</button>
-<div class="h-64 overflow-hidden">
-<img alt="" class="w-full h-full object-cover" id="modalImage" src=""/>
-</div>
-<div class="p-8">
-<h2 class="text-3xl font-black text-slate-900 dark:text-white mb-4" id="modalTitle"></h2>
-<p class="text-slate-600 dark:text-slate-400 mb-8 leading-relaxed font-medium" id="modalDescription"></p>
-<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-<div class="space-y-4">
-<div class="flex items-start gap-3">
-<span class="material-symbols-outlined text-primary">location_on</span>
-<div class="text-sm">
-<p class="font-bold text-slate-900 dark:text-white">Dirección</p>
-<p class="text-slate-500 dark:text-slate-400" id="modalAddress"></p>
-</div>
-</div>
-<div class="flex items-start gap-3">
-<span class="material-symbols-outlined text-primary">call</span>
-<div class="text-sm">
-<p class="font-bold text-slate-900 dark:text-white">Teléfono</p>
-<p class="text-slate-500 dark:text-slate-400" id="modalPhone"></p>
-</div>
-</div>
-</div>
-<div class="flex items-start gap-3">
-<span class="material-symbols-outlined text-primary">schedule</span>
-<div class="text-sm">
-<p class="font-bold text-slate-900 dark:text-white">Horario</p>
-<p class="text-slate-500 dark:text-slate-400" id="modalHours"></p>
-</div>
-</div>
-</div>
-<div class="flex flex-col sm:flex-row gap-4">
-<button class="flex-1 bg-[#C41E3A] hover:opacity-90 text-white font-bold py-3.5 rounded-xl transition-all flex items-center justify-center gap-2 shadow-lg shadow-[#C41E3A]/20">
-<span class="material-symbols-outlined">call</span>
-                    Llamar ahora
-                </button>
-<button class="flex-1 bg-accent-yellow hover:bg-amber-400 text-zinc-900 font-bold py-3.5 rounded-xl transition-all flex items-center justify-center gap-2 shadow-lg shadow-amber-500/20">
-<span class="material-symbols-outlined">map</span>
-                    Ver mapa
-                </button>
-</div>
-</div>
-</div>
-</div>
-<script>
+      <div class="h-64 overflow-hidden">
+        <img alt="" class="w-full h-full object-cover" id="modalImage" src="" />
+      </div>
+      <div class="p-8">
+        <h2 class="text-3xl font-black text-slate-900 dark:text-white mb-4" id="modalTitle"></h2>
+        <p class="text-slate-600 dark:text-slate-400 mb-8 leading-relaxed font-medium" id="modalDescription"></p>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+          <div class="space-y-4">
+            <div class="flex items-start gap-3">
+              <span class="material-symbols-outlined text-primary">location_on</span>
+              <div class="text-sm">
+                <p class="font-bold text-slate-900 dark:text-white">Dirección</p>
+                <p class="text-slate-500 dark:text-slate-400" id="modalAddress"></p>
+              </div>
+            </div>
+            <div class="flex items-start gap-3">
+              <span class="material-symbols-outlined text-primary">call</span>
+              <div class="text-sm">
+                <p class="font-bold text-slate-900 dark:text-white">Teléfono</p>
+                <p class="text-slate-500 dark:text-slate-400" id="modalPhone"></p>
+              </div>
+            </div>
+          </div>
+          <div class="flex items-start gap-3">
+            <span class="material-symbols-outlined text-primary">schedule</span>
+            <div class="text-sm">
+              <p class="font-bold text-slate-900 dark:text-white">Horario</p>
+              <p class="text-slate-500 dark:text-slate-400" id="modalHours"></p>
+            </div>
+          </div>
+        </div>
+        <div class="flex flex-col sm:flex-row gap-4">
+          <button class="flex-1 bg-[#C41E3A] hover:opacity-90 text-white font-bold py-3.5 rounded-xl transition-all flex items-center justify-center gap-2 shadow-lg shadow-[#C41E3A]/20">
+            <span class="material-symbols-outlined">call</span>
+            Llamar ahora
+          </button>
+          <button class="flex-1 bg-accent-yellow hover:bg-amber-400 text-zinc-900 font-bold py-3.5 rounded-xl transition-all flex items-center justify-center gap-2 shadow-lg shadow-amber-500/20">
+            <span class="material-symbols-outlined">map</span>
+            Ver mapa
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========== SCRIPT PARA FUNCIONES DEL MODAL ========== -->
+  <script>
+    /**
+     * Abre el modal con los datos del negocio seleccionado.
+     * @param {string} title   - Nombre del negocio
+     * @param {string} desc    - Descripción completa
+     * @param {string} addr    - Dirección
+     * @param {string} phone   - Teléfono
+     * @param {string} hours   - Horario
+     * @param {string} img     - URL de la imagen
+     */
     function openModal(title, desc, addr, phone, hours, img) {
-        document.getElementById('modalTitle').innerText = title;
-        document.getElementById('modalDescription').innerText = desc;
-        document.getElementById('modalAddress').innerText = addr;
-        document.getElementById('modalPhone').innerText = phone;
-        document.getElementById('modalHours').innerText = hours;
-        document.getElementById('modalImage').src = img;
-        document.getElementById('modalImage').alt = title;
-        
-        const modal = document.getElementById('businessModal');
-        modal.classList.remove('hidden');
-        modal.classList.add('flex');
-        document.body.style.overflow = 'hidden';
+      document.getElementById('modalTitle').innerText = title;
+      document.getElementById('modalDescription').innerText = desc;
+      document.getElementById('modalAddress').innerText = addr;
+      document.getElementById('modalPhone').innerText = phone;
+      document.getElementById('modalHours').innerText = hours;
+      document.getElementById('modalImage').src = img;
+      document.getElementById('modalImage').alt = title;
+
+      const modal = document.getElementById('businessModal');
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+      document.body.style.overflow = 'hidden';
     }
 
+    /** Cierra el modal y restaura el scroll */
     function closeModal() {
-        const modal = document.getElementById('businessModal');
-        modal.classList.add('hidden');
-        modal.classList.remove('flex');
-        document.body.style.overflow = '';
+      const modal = document.getElementById('businessModal');
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+      document.body.style.overflow = '';
     }
-</script></body></html>
+  </script>
+</body>
+</html>
